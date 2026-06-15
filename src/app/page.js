@@ -210,7 +210,7 @@ CERTIFICATIONS
         </ul>
 
         <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="nav-btn">
-          Let&apos;s Talk
+          Hire Me
         </a>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
