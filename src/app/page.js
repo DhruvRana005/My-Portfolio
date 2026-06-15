@@ -2,16 +2,9 @@
 
 import React, { useState } from 'react';
 
-interface SkillCardProps {
-  title: string;
-  percentage: number;
-  icon: React.ReactNode;
-  delayClass: string;
-}
-
-function SkillCard({ title, percentage, icon, delayClass }: SkillCardProps) {
+function SkillCard({ title, percentage, icon, delayClass }) {
   const [currentPercent, setCurrentPercent] = React.useState(0);
-  const cardRef = React.useRef<HTMLDivElement>(null);
+  const cardRef = React.useRef(null);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -59,7 +52,7 @@ function SkillCard({ title, percentage, icon, delayClass }: SkillCardProps) {
       <div className="skill-progress-bar">
         <div 
           className="skill-progress-fill" 
-          style={{ '--progress-width': `${percentage}%` } as React.CSSProperties}
+          style={{ '--progress-width': `${percentage}%` }}
         ></div>
       </div>
       <span className="skill-percentage">{currentPercent}%</span>
@@ -91,7 +84,7 @@ export default function Home() {
   }, []);
 
   // Smooth scroll helper
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -101,7 +94,7 @@ export default function Home() {
   };
 
   // Contact form submission via WhatsApp
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // Format message text
@@ -122,7 +115,7 @@ export default function Home() {
   };
 
   // Newsletter subscribe
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = (e) => {
     e.preventDefault();
     setEmailSubscribed(true);
     setTimeout(() => {
