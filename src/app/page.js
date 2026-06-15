@@ -198,7 +198,7 @@ CERTIFICATIONS
       {/* Floating Navigation Header */}
       <nav className="navbar">
         <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="nav-logo">
-          <img src="/passport photo.jpg" alt="Dhruv Rana" className="nav-logo-img" />
+          <img src="/passport.jpeg" alt="Dhruv Rana" className="nav-logo-img" />
           Dhruv<span>Rana</span>
         </a>
         
@@ -235,7 +235,7 @@ CERTIFICATIONS
             <div className="photo-frame-container animate-fade-in-scale delay-200">
               <div className="photo-circle-outer">
                 <div className="photo-circle-inner">
-                  <img src="/passport photo.jpg" alt="Dhruv Rana" className="profile-image" />
+                  <img src="/passport.jpeg" alt="Dhruv Rana" className="profile-image" />
                 </div>
                 <div className="deco-dot-large"></div>
                 <div className="deco-dot-small"></div>
